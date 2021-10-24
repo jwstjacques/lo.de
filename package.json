@@ -4,11 +4,12 @@
   "description": "URL Shortener",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "lint": "eslint src/**/*.ts",
+    "build": "tsc --project ./",
     "format": "eslint src/**/*.ts --fix",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "lint": "eslint src/**/*.ts",
+    "prepare": "husky install",
+    "start": "npm run build && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Jason St. Jacques",
